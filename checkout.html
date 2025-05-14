@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Pop MartoOcCa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f7ff;
+      color: #333;
+    }
+
+    .header {
+      background-color: #fbb7c3;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .header p {
+      font-size: 16px;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .navbar {
+      background-color: #f75bb0;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+      color: #fff9f5;
+    }
+
+    .checkout-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-items {
+      margin-bottom: 25px;
+    }
+
+    .checkout-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .checkout-item h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .checkout-item p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .checkout-item-quantity,
+    .checkout-item-total {
+      font-size: 14px;
+      color: #333;
+      margin-top: 5px;
+    }
+
+    .checkout-total {
+      text-align: right;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2A2356;
+      margin-top: 30px;
+    }
+
+    .user-info-form {
+      margin-top: 30px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .user-info-form input {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .payment-method {
+      margin-top: 30px;
+    }
+
+    .payment-method label {
+      font-weight: bold;
+      font-size: 18px;
+      color: #2A2356;
+    }
+
+    .pay-now-btn {
+      background: #f75bb0;
+      color: white;
+      width: 100%;
+      padding: 18px;
+      border: none;
+      border-radius: 30px;
+      margin-top: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .pay-now-btn:hover {
+      background: #2A2356;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #fbb7c3;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🎁 Pop MartoOcCa</h1>
+    <p>Temukan Kejutan dalam Setiap Kotak!</p>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html">Contact</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="invoice.html">Invoice</a>
+  </div>
+
+  <div class="checkout-container">
+    <h2>📦 Ringkasan Checkout</h2>
+
+    <div class="checkout-items"></div>
+
+    <div class="checkout-total">Total Pembayaran: Rp 0</div>
+
+    <div class="user-info-form">
+      <input type="text" id="name" placeholder="Nama Lengkap" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="address" placeholder="Alamat Pengiriman" required>
+      <input type="tel" id="phone" placeholder="Nomor Telepon" required>
+    </div>
+
+    <div class="payment-method">
+      <h3>Pilih Metode Pembayaran</h3>
+      <div>
+        <input type="radio" id="bank-transfer" name="payment-method" value="Bank Transfer">
+        <label for="bank-transfer">Bank Transfer</label>
+      </div>
+      <div>
+        <input type="radio" id="credit-card" name="payment-method" value="Kartu Kredit">
+        <label for="credit-card">Kartu Kredit</label>
+      </div>
+      <div>
+        <input type="radio" id="digital-wallet" name="payment-method" value="Dompet Digital">
+        <label for="digital-wallet">Dompet Digital</label>
+      </div>
+    </div>
+
+    <button class="pay-now-btn">Bayar Sekarang</button>
+  </div>
+
+  <footer>
+    <p>© 2023 Pop MartoOcCa - Kejutan Tak Terduga dalam Setiap Kotak!</p>
+  </footer>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    if (cartItems.length === 0) {
+      window.location.href = 'cart.html';
+    }
+
+    function displayCheckoutItems() {
+      const container = document.querySelector('.checkout-items');
+      const totalContainer = document.querySelector('.checkout-total');
+      container.innerHTML = '';
+      let total = 0;
+
+      cartItems.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const itemEl = document.createElement('div');
+        itemEl.className = 'checkout-item';
+        itemEl.innerHTML = `
+          <div>
+            <h3>${item.name}</h3>
+            <p>Harga: Rp ${item.price.toLocaleString()}</p>
+            <div class="checkout-item-quantity">Jumlah: ${item.quantity}</div>
+          </div>
+          <div class="checkout-item-total">Rp ${itemTotal.toLocaleString()}</div>
+        `;
+        container.appendChild(itemEl);
+      });
+
+      totalContainer.innerHTML = `Total Pembayaran: Rp ${total.toLocaleString()}`;
+    }
+
+    displayCheckoutItems();
+
+    document.querySelector('.pay-now-btn').addEventListener('click', function () {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const address = document.getElementById('address').value;
+      const phone = document.getElementById('phone').value;
+
+      if (!name || !email || !address || !phone) {
+        alert('Mohon lengkapi semua data terlebih dahulu!');
+        return;
+      }
+
+      const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+      if (!paymentMethod) {
+        alert('Pilih metode pembayaran terlebih dahulu.');
+        return;
+      }
+
+      const checkoutData = {
+        name,
+        email,
+        address,
+        phone,
+        paymentMethod: paymentMethod.value,
+        cartData: cartItems
+      };
+
+      localStorage.setItem('checkoutData', JSON.stringify(checkoutData));
+
+      // Arahkan ke invoice tanpa hapus data dulu
+      window.location.href = 'invoice.html';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak - Pop MartoOcCa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Header & Navbar */
+    .header {
+      background-color: #fbb7c3;
+      text-align: center;
+      padding: 25px 10px 10px 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: white;
+      font-weight: 800;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .navbar {
+      background-color: #f75bb0;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+    /* Konten Kontak */
+    .container {
+      padding: 0 20px;
+    }
+
+    .contact-section {
+      padding: 50px 0;
+      background-color: #fff;
+    }
+
+    .contact-section h2 {
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-form {
+      background-color: #f8f8f8;
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid #FF69B4;
+    }
+
+    .contact-form h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #FF69B4;
+      border-radius: 8px;
+      margin-top: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #FF69B4;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #FF1493;
+      transform: scale(1.05);
+    }
+
+    .contact-info {
+      padding: 20px;
+      background-color: #fff5f5;
+      border-radius: 10px;
+    }
+
+    .contact-info h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info h4 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .contact-info p {
+      font-size: 14px;
+      margin: 0 0 15px;
+    }
+
+    .info-item {
+      margin: 20px 0;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .map-container {
+      margin-top: 30px;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🎁 Pop MartoOcCa</h1>
+    <p>Tempat Koleksi Blind Box Eksklusif & Limited Edition</p>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html">Contact</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="invoice.html">Invoice</a>
+  </div>
+
+  <!-- Konten Kontak -->
+  <div class="container">
+    <section class="contact-section">
+      <h2>📮 Hubungi Kolektor Kami</h2>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h3>📩 Form Pertanyaan</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label>Nama Kolektor</label>
+              <input type="text" name="name" placeholder="Nama Anda" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="email@contoh.com" required />
+            </div>
+            <div class="form-group">
+              <label>Jenis Pertanyaan</label>
+              <select name="subject" required>
+                <option value="">Pilih kategori</option>
+                <option>Pemesanan Box</option>
+                <option>Kelangkaan Item</option>
+                <option>Kerjasama Koleksi</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Detail Pesan</label>
+              <textarea name="message" rows="5" placeholder="Tulis pertanyaan Anda tentang koleksi..."></textarea>
+            </div>
+            <button type="submit">🎯 Kirim Pertanyaan</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3>🔍 Temukan Kami</h3>
+          <div class="info-item">
+            <h4>📍 Gudang Protiga</h4>
+            <p>Jl. Simpang Sidodadi no 36<br>Kota Malang, 65163</p>
+          </div>
+          <div class="info-item">
+            <h4>📞 Hotline Kolektor</h4>
+            <p>0823-3477-1293 (WhatsApp)</p>
+            <p>📠 (021) 1234-5678</p>
+          </div>
+          <div class="info-item">
+            <h4>🕒 Jam Operasional</h4>
+            <p>Senin-Jumat: 09:00 - 20:00 WIB</p>
+            <p>Weekend: 10:00 - 18:00 WIB</p>
+          </div>
+          <div class="info-item">
+            <h4>📧 Email Resmi</h4>
+            <p>support@popmartocca.id</p>
+            <p>collab@popmartocca.id (Kerjasama)</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135068644!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x9bf7e1a3b4a4b4e1!2sMystery%20Box%20Haven!5e0!3m2!1sen!2sid!4v1622101234567!5m2!1sen!2sid"
+        allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Fungsi untuk mengirim pesan ke WhatsApp
+    function sendWhatsAppMessage(event) {
+      event.preventDefault(); // Mencegah form untuk refresh
+
+      // Mengambil nilai dari form
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+      const subject = document.querySelector('select[name="subject"]').value;
+
+      // Format pesan untuk WhatsApp
+      const whatsappMessage = `Halo, saya ${name}, ingin menghubungi Anda. \n\nEmail: ${email} \nJenis Pertanyaan: ${subject} \nPesan: ${message}`;
+
+      // URL WhatsApp dengan pesan
+      const whatsappURL = `https://wa.me/6282334771293?text=${encodeURIComponent(whatsappMessage)}`;
+
+      // Arahkan pengguna ke WhatsApp
+      window.location.href = whatsappURL;
+    }
+
+    // Menambahkan event listener ke form
+    document.querySelector('#contactForm').addEventListener('submit', sendWhatsAppMessage);
+  </script>
+
+</body>
+</html>
